@@ -1,6 +1,5 @@
-python
-from functools import lru_cache
 
+from functools import lru_cache
 import pandas as pd
 import xgboost as xgb
 from fastapi import FastAPI, HTTPException
@@ -261,4 +260,5 @@ def predict(data: PredictRequest):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
 
